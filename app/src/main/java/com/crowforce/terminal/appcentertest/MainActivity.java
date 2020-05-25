@@ -2,9 +2,10 @@ package com.crowforce.terminal.appcentertest;
 
 import android.os.Bundle;
 
+import com.github.javiersantos.appupdater.AppUpdater;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
-import com.microsoft.appcenter.distribute.Distribute;
+//import com.microsoft.appcenter.distribute.Distribute;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -26,9 +27,14 @@ public class MainActivity extends AppCompatActivity {
         checkUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Distribute.checkForUpdate();
+               // Distribute.checkForUpdate();
+                AppUpdater appUpdater = new AppUpdater(MainActivity.this);
+                appUpdater.start();
             }
         });
+
+        AppUpdater appUpdater = new AppUpdater(this);
+        appUpdater.start();
 
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {

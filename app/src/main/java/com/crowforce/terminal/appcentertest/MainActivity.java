@@ -32,13 +32,24 @@ public class MainActivity extends AppCompatActivity {
                // Distribute.checkForUpdate();yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
                 //AppUpdater appUpdater = new AppUpdater(MainActivity.this);
                 //appUpdater.start();
-                new AppUpdater(MainActivity.this)
+               /* new AppUpdater(MainActivity.this)
                         //.setUpdateFrom(UpdateFrom.JSON)
                         .setUpdateFrom(UpdateFrom.XML)
                         .setUpdateXML("https://github.com/sesdave/AppCenterTest/blob/master/app/updatem.xml")
                        // .setUpdateXML("https://drive.google.com/file/d/1vYeUTDDSvWSjGYqVuRQp1yzSY-uJOYZs/view?usp=sharing")
                        // .setUpdateJSON("https://github.com/sesdave/AppCenterTest/blob/master/app/updater.json")
                         //.setUpdateJSON("https://drive.google.com/file/d/1PbpocPlyHaIryovHiS6c84StG1fJSQTu/view?usp=sharing")
+                        .setDisplay(Display.DIALOG)
+                        .showAppUpdated(true)
+                        .start();
+
+                */
+                new AppUpdater(MainActivity.this)
+                        //.setUpdateFrom(UpdateFrom.GITHUB)
+                        //.setGitHubUserAndRepo("javiersantos", "AppUpdater")
+                        .setUpdateFrom(UpdateFrom.JSON)
+                       // .setUpdateXML("https://raw.githubusercontent.com/javiersantos/AppUpdater/master/app/update.json")
+                        .setUpdateJSON("https://github.com/sesdave/AppCenterTest/blob/master/app/updater.json")
                         .setDisplay(Display.DIALOG)
                         .showAppUpdated(true)
                         .start();

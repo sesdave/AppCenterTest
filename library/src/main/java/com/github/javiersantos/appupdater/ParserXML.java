@@ -41,14 +41,14 @@ class ParserXML {
         InputStream inputStream = null;
 
         try {
-            InputSource is = new InputSource(xmlUrl.openStream());
-            is.setEncoding("ISO-8859-1");
-            //URLConnection connection = xmlUrl.openConnection();
-           // inputStream = connection.getInputStream();
+            //InputSource is = new InputSource(xmlUrl.openStream());
+           // is.setEncoding("UTF-8");
+            URLConnection connection = xmlUrl.openConnection();
+            inputStream = connection.getInputStream();
             SAXParser parser = factory.newSAXParser();
             HandlerXML handler = new HandlerXML();
            // inputStream.setEncoding("Cp1255");
-            parser.parse(is, handler);
+            parser.parse(inputStream, handler);
             return handler.getUpdate();
         } catch (ParserConfigurationException | SAXException e) {
             Log.e("AppUpdater", "The XML updater file is mal-formatted. AppUpdate can't check for updates.", e);

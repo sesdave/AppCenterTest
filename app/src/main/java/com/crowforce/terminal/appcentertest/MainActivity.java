@@ -3,6 +3,8 @@ package com.crowforce.terminal.appcentertest;
 import android.os.Bundle;
 
 import com.github.javiersantos.appupdater.AppUpdater;
+import com.github.javiersantos.appupdater.enums.Display;
+import com.github.javiersantos.appupdater.enums.UpdateFrom;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 //import com.microsoft.appcenter.distribute.Distribute;
@@ -27,9 +29,19 @@ public class MainActivity extends AppCompatActivity {
         checkUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               // Distribute.checkForUpdate();
-                AppUpdater appUpdater = new AppUpdater(MainActivity.this);
-                appUpdater.start();
+               // Distribute.checkForUpdate();yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
+                //AppUpdater appUpdater = new AppUpdater(MainActivity.this);
+                //appUpdater.start();
+                new AppUpdater(MainActivity.this)
+                        //.setUpdateFrom(UpdateFrom.JSON)
+                        .setUpdateFrom(UpdateFrom.XML)
+                        .setUpdateXML("https://github.com/sesdave/AppCenterTest/blob/master/app/update.xml")
+                       // .setUpdateXML("https://drive.google.com/file/d/1vYeUTDDSvWSjGYqVuRQp1yzSY-uJOYZs/view?usp=sharing")
+                       // .setUpdateJSON("https://github.com/sesdave/AppCenterTest/blob/master/app/updater.json")
+                        //.setUpdateJSON("https://drive.google.com/file/d/1PbpocPlyHaIryovHiS6c84StG1fJSQTu/view?usp=sharing")
+                        .setDisplay(Display.DIALOG)
+                        .showAppUpdated(true)
+                        .start();
             }
         });
 

@@ -1,0 +1,7 @@
+<AppUpdater>
+    <update>
+        <latestVersion>1.2.2</latestVersion>
+        <latestVersionCode>10</latestVersionCode>
+        <url>https://github.com/sesdave/AppCenterTest/master/app/release</url>
+    </update>
+</AppUpdater>

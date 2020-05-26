@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
                         //.setGitHubUserAndRepo("javiersantos", "AppUpdater")
                         .setUpdateFrom(UpdateFrom.JSON)
                        // .setUpdateXML("https://raw.githubusercontent.com/javiersantos/AppUpdater/master/app/update.json")
-                        .setUpdateJSON("https://github.com/sesdave/AppCenterTest/blob/master/app/updater.json")
+                        .setUpdateJSON("https://raw.githubusercontent.com/sesdave/AppCenterTest/master/app/update-changelog.json")
                         .setDisplay(Display.DIALOG)
                         .showAppUpdated(true)
                         .start();

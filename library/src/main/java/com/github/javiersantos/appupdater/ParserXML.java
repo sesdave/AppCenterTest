@@ -42,7 +42,7 @@ class ParserXML {
 
         try {
             InputSource is = new InputSource(xmlUrl.openStream());
-            is.setEncoding("Cp1255");
+            is.setEncoding("ISO-8859-1");
             //URLConnection connection = xmlUrl.openConnection();
            // inputStream = connection.getInputStream();
             SAXParser parser = factory.newSAXParser();

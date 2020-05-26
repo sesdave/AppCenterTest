@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
                 new AppUpdater(MainActivity.this)
                         //.setUpdateFrom(UpdateFrom.JSON)
                         .setUpdateFrom(UpdateFrom.XML)
-                        .setUpdateXML("https://github.com/sesdave/AppCenterTest/blob/master/app/update.xml")
+                        .setUpdateXML("https://github.com/sesdave/AppCenterTest/blob/master/app/updatem.xml")
                        // .setUpdateXML("https://drive.google.com/file/d/1vYeUTDDSvWSjGYqVuRQp1yzSY-uJOYZs/view?usp=sharing")
                        // .setUpdateJSON("https://github.com/sesdave/AppCenterTest/blob/master/app/updater.json")
                         //.setUpdateJSON("https://drive.google.com/file/d/1PbpocPlyHaIryovHiS6c84StG1fJSQTu/view?usp=sharing")
